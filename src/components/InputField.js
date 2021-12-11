@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function InputField(props) {
+export default function InputField({text, handleSubmit, handleInput}) {
     return (
         <label>
-            <input value={props.text} onChange={(e) => props.setText(e.target.value)} />
-            <button onClick={props.addTodo}>Add Todo</button>
+            <input value={text} onChange={(e) => handleInput(e.target.value)} />
+            <button onClick={handleSubmit}>Add Todo</button>
         </label>
     )
 }
